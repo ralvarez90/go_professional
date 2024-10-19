@@ -15,4 +15,7 @@ func main() {
 
 	// constantes
 	lessons.LS04Constantes()
+
+	// conversiones de tipos de datos
+	lessons.LS05Conversiones()
 }

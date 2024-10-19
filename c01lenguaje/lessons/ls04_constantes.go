@@ -12,8 +12,10 @@ func LS04Constantes() {
 	fmt.Println("LS04 - CONSTANTES")
 
 	// define constant string
-	const USERNAME = "RAlvarez90"
+	const USERNAME string = "RAlvarez90"
+	const PASSWORD = "Leslie123asd"
 	fmt.Println("USERNAME:", USERNAME)
+	fmt.Println("PASSWORD:", PASSWORD)
 
 	// accedemos a constantes globales
 	fmt.Println("UNO:", UNO)

@@ -1,6 +1,10 @@
 package lessons
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+	"unsafe"
+)
 
 // VARIABLES
 //
@@ -16,14 +20,34 @@ import "fmt"
 // Todas las variables tienen un valor default asignado. Para los punteros y las interfaces
 // el valor default siempre será null.
 //
+// Como en C, empleamos el operador & para obtener la dirección de memoria de una
+// variable.
+//
+// Podemos definir variables sin especificar el tipo y sin usar la palabra reservada
+// var usando el operador de asignación :=.
+//
 // Notas:
 // - Se usa byte para representar caracteres ascii y rune para caracteres unicode.
-// - Si usamos fmt.Printf empleamos el especificador %p para obtener la dirección
-// de memporia de una variable.
 func LS02Variables() {
 	// string ejemplo
 	fmt.Println("LS02 VARIABLES")
 	var welcomeMsg string = "Welcome to Golang Language Programming!"
-	fmt.Println(welcomeMsg)
+	fmt.Println(welcomeMsg, "wiht address:", &welcomeMsg)
+
+	// show size some int64
+	showIntegersSize()
+
+	// other var
+	myAge := 34
+	myAge++
+	fmt.Println("El siguiente año cumplo", myAge, "años.")
 	fmt.Println()
+}
+
+func showIntegersSize() {
+	var numInt64 int64 = 0
+	fmt.Printf("numInt64: %d, with type %T, and size (bytes) %d\n", numInt64, numInt64, unsafe.Sizeof(numInt64))
+
+	var maxUint uint64 = math.MaxUint64
+	fmt.Println("math.MaxUint64:", maxUint)
 }
