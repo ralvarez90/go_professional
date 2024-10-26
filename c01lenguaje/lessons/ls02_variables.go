@@ -1,6 +1,7 @@
 package lessons
 
 import (
+	"c01lenguaje/tools"
 	"fmt"
 	"math"
 	"unsafe"
@@ -29,9 +30,9 @@ import (
 // Notas:
 // - Se usa byte para representar caracteres ascii y rune para caracteres unicode.
 func LS02Variables() {
-	// string ejemplo
-	fmt.Println("LS02 VARIABLES")
-	var welcomeMsg string = "Welcome to Golang Language Programming!"
+	fmt.Println(tools.MakeTitle("Variables"))
+
+	var welcomeMsg string = "\tWelcome to Golang Language Programming!"
 	fmt.Println(welcomeMsg, "wiht address:", &welcomeMsg)
 
 	// show size some int64
@@ -40,14 +41,14 @@ func LS02Variables() {
 	// other var
 	myAge := 34
 	myAge++
-	fmt.Println("El siguiente año cumplo", myAge, "años.")
+	fmt.Println("\tEl siguiente año cumplo", myAge, "años.")
 	fmt.Println()
 }
 
 func showIntegersSize() {
 	var numInt64 int64 = 0
-	fmt.Printf("numInt64: %d, with type %T, and size (bytes) %d\n", numInt64, numInt64, unsafe.Sizeof(numInt64))
+	fmt.Printf("\tnumInt64: %d, with type %T, and size (bytes) %d\n", numInt64, numInt64, unsafe.Sizeof(numInt64))
 
 	var maxUint uint64 = math.MaxUint64
-	fmt.Println("math.MaxUint64:", maxUint)
+	fmt.Println("\tmath.MaxUint64:", maxUint)
 }

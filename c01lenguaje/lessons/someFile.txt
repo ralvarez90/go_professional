@@ -1,0 +1,9 @@
+#!/usr/bin env
+"""Código Python de Ejemplo"""
+
+def main():
+    print('Hello World in Python3')
+
+if __name__ == '__main__':
+    main()
+    input('\nPress any key to continue . . . ')

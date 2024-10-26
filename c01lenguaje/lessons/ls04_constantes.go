@@ -1,6 +1,9 @@
 package lessons
 
-import "fmt"
+import (
+	"c01lenguaje/tools"
+	"fmt"
+)
 
 // CONSTANTES
 //
@@ -9,7 +12,7 @@ import "fmt"
 //
 // Empleamos la palabra resvervada const para definir una constante.
 func LS04Constantes() {
-	fmt.Println("LS04 - CONSTANTES")
+	fmt.Println(tools.MakeTitle("Constantes"))
 
 	// define constant string
 	const USERNAME string = "RAlvarez90"
@@ -18,9 +21,9 @@ func LS04Constantes() {
 	fmt.Println("PASSWORD:", PASSWORD)
 
 	// accedemos a constantes globales
-	fmt.Println("UNO:", UNO)
-	fmt.Println("UNO:", DOS)
-	fmt.Println("UNO:", TRES)
+	fmt.Println("\tUNO:", UNO)
+	fmt.Println("\tUNO:", DOS)
+	fmt.Println("\tUNO:", TRES)
 	fmt.Println()
 }
 
